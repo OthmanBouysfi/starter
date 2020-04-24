@@ -19,4 +19,14 @@ return [
      "offer name must be unique" => 'اسم العرض يجب ألا يتكرر',
      'offer price required' => 'السعر المطلوب',
      'offer details required' => 'التفاصيل العرض المطلوبة ',
+     'Add your offer' => 'اضافة عرض جديد',
+     'Offer Name en' =>   ' اسم العرض انجليزي',
+     'Offer Name fr' => 'اسم العرض فرنسي',
+     'Offer Name ar' => 'اسم العرض العربي',
+     'Offer Price' => 'سعر العرض',
+     'Offer Details en' => 'تفاصيل العرض انجليزي',
+     'Offer Details fr' => 'تفاصيل العرض فرنسي',
+     'Offer Details ar' => 'تفاصيل العرض العربي',
+     'Save Offer' => 'حفظ '
+
 ];

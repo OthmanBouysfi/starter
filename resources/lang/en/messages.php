@@ -19,6 +19,15 @@ return [
    "offer name must be unique" => 'offer Name must be unique',
    'offer price required' => ' The asking price',
    'offer details required' => 'Offer details required  ',
+   'Add your offer' => 'Add your offer',
+   'Offer Name en' => 'Offer Name english',
+   'Offer Name fr' => 'Offer Name frensh',
+   'Offer Name ar' => 'Offer Name arabic',
+   'Offer Price' => 'Offer Price',
+   'Offer Details en' =>  'Offer Details english',
+   'Offer Details fr' =>  'Offer Details frensh',
+   'Offer Details ar' =>  'Offer Details arabic',
+   'Save Offer' => 'Save'
    
 
     
