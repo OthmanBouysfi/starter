@@ -15,10 +15,10 @@ return [
    
    "hello Guys" => 'Hello GUYS',
    "welcom" => 'WELCOME',
-   "offer name required" => 'offer Name Required',
-   "offer name must be unique" => 'offer Name must be unique',
-   'offer price required' => ' The asking price',
-   'offer details required' => 'Offer details required  ',
+   "offer name required" => 'Nom de offre requis',
+   "offer name must be unique" => 'Le nom de offre doit être unique',
+   'offer price required' => 'Le prix demandé',
+   'offer details required' => ' Détails de offre requis ',
    
 
     
