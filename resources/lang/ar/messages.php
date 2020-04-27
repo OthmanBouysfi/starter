@@ -27,6 +27,10 @@ return [
      'Offer Details en' => 'تفاصيل العرض انجليزي',
      'Offer Details fr' => 'تفاصيل العرض فرنسي',
      'Offer Details ar' => 'تفاصيل العرض العربي',
-     'Save Offer' => 'حفظ '
+     'Save Offer' => 'حفظ ',
+     'Offer Name' => 'اسم العرض',
+     'Offer Details' => 'تفاصيل العرض',
+     'operation' => 'عملية',
+     'update' => 'تحديث'
 
 ];

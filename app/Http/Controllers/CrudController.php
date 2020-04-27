@@ -27,9 +27,22 @@ class CrudController extends Controller
           'details' => 'offer details',
         ]);
     }*/
-    public function create(){
-        return view('offers.create');
+    public function getOffers()
+    {
+        return Offer::select('id', 'name')->get();
     }
+
+
+
+    public function create(){
+
+        return view('offers.create');
+
+    }
+
+
+
+
     public function store(OfferRequest $request){
         //validate data before insert to database
       
@@ -81,4 +94,41 @@ class CrudController extends Controller
         )->get(); // return collection
         return view('offers.all', compact('offers'));
     }
+
+    public function editOffer($offer_id){
+      // Offer::findOrFail($offer_id);
+      $offer = Offer::find($offer_id);  // search in given table id only
+      if (!$offer)
+          return redirect()->back();
+
+      $offer = Offer::select('id', 'name_ar','name_fr' ,  'name_en', 'details_ar', 'details_fr' , 'details_en', 'price')->find($offer_id);
+
+      return view('offers.edit', compact('offer'));
+        
+      
+
+    }
+    public function UpdateOffer(OfferRequest $request , $offer_id){
+    //validation request
+    
+    //check if offer exists
+    $offer = Offer::find($offer_id);  // search in given table id only
+
+    if (!$offer)
+    return redirect()->back();
+    //update data  -- Method 1
+     
+    $offer -> update($request -> all());
+    return redirect() -> back() -> with(['success' => 'تم التحديث بنجاح']);
+  
+     //Method 2
+   /**$offer -> update([
+     'name_ar' => $request -> name_ar,
+     'name_en' => $request -> name_en,
+     'name_fr' => $request -> name_fr,
+     'price' => $request -> price,
+    ]);*/
+
+    }
+
 }

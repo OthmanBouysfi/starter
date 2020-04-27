@@ -36,10 +36,19 @@ class OfferRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => trans('messages.offer name required'),
-            'name.unique' => trans('messages.offer name must be unique'),
-            'price.required' => trans('messages.offer price required'),
-            'details.required' => trans('messages.offer details required'),
+            'name_ar.required' => __('messages.offer name required'),
+            'name_en.required' => __('messages.offer name required'),
+            'name_fr.required' => __('messages.offer name required'),
+            'name_ar.unique' => 'اسم العرض موجود ',
+            'name_en.unique' => 'Offer name  is exists ',
+            'name_fr.unique' => 'nom offre déja existes ',
+            'price.numeric' => 'سعر العرض يجب ان يكون ارقام',
+            'price.required' => 'السعر مطلوب',
+            'details_ar.required' => 'ألتفاصيل مطلوبة ',
+            'details_en.required' => 'ألتفاصيل مطلوبة ',
+            'details_fr.required' => 'ألتفاصيل مطلوبة ',
+            'photo.required' =>  'صوره العرض مطلوب',
+            'photo.mimes' =>  'صوره غير صالحة',
 
         ];
     }

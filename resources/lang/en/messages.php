@@ -27,7 +27,11 @@ return [
    'Offer Details en' =>  'Offer Details english',
    'Offer Details fr' =>  'Offer Details frensh',
    'Offer Details ar' =>  'Offer Details arabic',
-   'Save Offer' => 'Save'
+   'Save Offer' => 'Save',
+   'Offer Name' => 'Offer Name',
+   'Offer Details' => 'Offer Details',
+   'operation' => 'operation',
+   'update' => 'update'
    
 
     

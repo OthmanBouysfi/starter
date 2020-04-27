@@ -20,6 +20,7 @@ return [
    'offer price required' => 'Le prix demandé',
    'offer details required' => ' Détails de offre requis ',
    'Add your offer' => 'ajoutez votre offre',
+   'Edit your offer' => 'modifier votre offre',
    'Offer Name en' => 'Nom Offre englich',
    'Offer Name fr' => 'Nom Offre francais',
    'Offer Name ar' => 'Nom Offre arabe',
@@ -27,7 +28,11 @@ return [
    'Offer Details en' => 'Détails Offre english',
    'Offer Details fr' => 'Détails Offre francais',
    'Offer Details ar' => 'Détails Offre arabe',
-   'Save Offer' => 'Enregistrer'
+   'Save Offer' => 'Enregistrer',
+   'Offer Name' => 'Nom Offre',
+   'Offer Details' => 'Détails Offre',
+   'operation' => 'opération',
+   'update' => 'mettre à jour'
    
    
 
