@@ -4,12 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\OfferRequest;
 use App\Models\Offer;
+use App\Traits\OfferTrait;
 use Illuminate\Support\Facades\Validator; 
 use Illuminate\Http\Request;
 use LaravelLocalization;
 
+
 class CrudController extends Controller
 {
+
+    use OfferTrait;
+    // photo
+    // update
+    // delete
+    // upload image 
+    //improve code 
+
+
+    
     /**
      * Create a new controller instance.
      *
@@ -27,10 +39,7 @@ class CrudController extends Controller
           'details' => 'offer details',
         ]);
     }*/
-    public function getOffers()
-    {
-        return Offer::select('id', 'name')->get();
-    }
+   
 
 
 
@@ -40,7 +49,10 @@ class CrudController extends Controller
 
     }
 
-
+    public function getOffers()
+    {
+        return Offer::select('id', 'name')->get();
+    }
 
 
     public function store(OfferRequest $request){
@@ -54,8 +66,19 @@ class CrudController extends Controller
           //if($validator -> fails()){
             //return redirect()->back()->withErrors($validator)->withInput();
           //}
+
+
+
+         //save photo in folder  
+        $file_name = $this -> saveImage($request -> photo , 'images/offers');
+      
+         
+        
+
+
         //insert
         Offer::create([
+            'photo' => $file_name,
             'name_en' => $request->name_en,
             'name_fr' => $request->name_fr,
             'name_ar' => $request->name_ar,
@@ -66,6 +89,7 @@ class CrudController extends Controller
         ]);
         return redirect()->back()->with(['success' => 'تم اضافة العرض بنجاح']);
     }
+   
     /*protected function getRules(){
         return $rules = [
             //'name' => 'required|max:100|unique:offers,name',
