@@ -34,11 +34,14 @@ Route::group(['prefix' =>  LaravelLocalization::setLocale(),
          
          Route::get('edit/{offer_id}', 'CrudController@editOffer');
         Route::post('update/{offer_id}', 'CrudController@UpdateOffer')->name('offers.update');
+        Route::get('delete/{offer_id}', 'CrudController@DelleteOffer')->name('offers.delete');
 
-         Route::get('all','CrudController@getAllOffers');
+         Route::get('all','CrudController@getAllOffers')->name('offers.name');
       });
       
 });
+
+Route::get('youtube' , 'CrudController@getVideo');
 
 /**Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
    Route::group(['prefix' => 'offers'], function () {

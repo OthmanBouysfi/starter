@@ -31,6 +31,10 @@ return [
      'Offer Name' => 'اسم العرض',
      'Offer Details' => 'تفاصيل العرض',
      'operation' => 'عملية',
-     'update' => 'تحديث'
+     'update' => 'تحديث',
+     'Offer not exist' => 'العرض غير موجود',
+     'offer deleted successfully' => 'تم حذف العرض بنجاح',
+     'delete' => 'حدف',
+     'images' => 'الصور'
 
 ];

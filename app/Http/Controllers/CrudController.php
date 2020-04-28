@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\VideoViewer;
 use App\Http\Requests\OfferRequest;
 use App\Models\Offer;
+use App\Models\Video;
 use App\Traits\OfferTrait;
 use Illuminate\Support\Facades\Validator; 
 use Illuminate\Http\Request;
@@ -152,6 +154,26 @@ class CrudController extends Controller
      'name_fr' => $request -> name_fr,
      'price' => $request -> price,
     ]);*/
+
+    }
+    public function DelleteOffer($offer_id){
+        //check if offer id exists
+
+        $offer = Offer::find($offer_id); // Offer::where('id','$offer_id') -> first();
+        
+        if(!$offer)
+        return redirect() -> back() -> with(['error' => __('messages.Offer not exist')]);
+        
+        $offer->delete();
+        return redirect()->route('offers.delete',$offer_id)
+          ->with(['success' => __('messages.offer deleted successfully')]);
+        
+    }
+
+    public function getVideo(){
+        $video = Video::first();
+        event(new VideoViewer($video));
+        return view('youtube')->with('video' , $video);
 
     }
 

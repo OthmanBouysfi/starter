@@ -32,7 +32,11 @@ return [
    'Offer Name' => 'Nom Offre',
    'Offer Details' => 'Détails Offre',
    'operation' => 'opération',
-   'update' => 'mettre à jour'
+   'update' => 'Modifier',
+   'Offer not exist' => 'offre existe pas',
+   'offer deleted successfully' => 'offre supprimée avec succès',
+   'delete' => 'Supprimer',
+   'images' => 'images'
    
    
 

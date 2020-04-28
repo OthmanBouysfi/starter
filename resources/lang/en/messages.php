@@ -31,7 +31,11 @@ return [
    'Offer Name' => 'Offer Name',
    'Offer Details' => 'Offer Details',
    'operation' => 'operation',
-   'update' => 'update'
+   'update' => 'update',
+   'Offer not exist' => 'offer not exist',
+   'offer deleted successfully' => 'offer deleted successfully',
+   'delete' => 'delete',
+   'images' => 'images'
    
 
     
